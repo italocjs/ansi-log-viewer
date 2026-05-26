@@ -1,0 +1,48 @@
+{
+  "name": "ansi-log-viewer",
+  "displayName": "ANSI Log Viewer",
+  "description": "View log files with ANSI colors, tail follow, and regex filter",
+  "version": "0.1.0",
+  "publisher": "personal",
+  "engines": { "vscode": "^1.80.0" },
+  "categories": ["Other"],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "logViewer.openFile",
+        "title": "Log Viewer: Open in Log Viewer"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "logViewer.openFile",
+          "when": "resourceExtname == .log || resourceExtname == .txt",
+          "group": "navigation"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "logViewer.openFile"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "npm run compile && vsce package --no-git-tag-version",
+    "install-ext": "code --install-extension ansi-log-viewer-0.1.0.vsix"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.80.0",
+    "@vscode/vsce": "^3.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "ansi-to-html": "^0.7.2"
+  }
+}

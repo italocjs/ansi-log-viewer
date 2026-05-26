@@ -1,0 +1,6 @@
+src/**
+.vscode/launch.json
+.vscode/tasks.json
+out/**/*.map
+tsconfig.json
+.gitignore
