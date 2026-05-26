@@ -1,6 +1,6 @@
 # JOURNAL
 
-### [2026-05-26 14:00:00 -0300] - PC Etiquetas
+### [2026-05-26 14:00:00 -0300] - Italo Soares (eng)
 - Summary: Extensão VS Code criada do zero — visualizador de logs com ANSI, tail e filtro regex.
 - Details:
     - Motivação: necessidade de inspecionar `logs/app_egf.log` do simova-marteAnalyzer com cores ANSI renderizadas, follow de EOF e filtragem, sem depender do terminal.
